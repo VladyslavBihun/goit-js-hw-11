@@ -1,2 +1,16 @@
 @import url('./reset.css');
 @import url('./loader.css');
+
+.form {
+}
+.label {
+}
+.input {
+}
+.button {
+}
+.loader {
+}
+.list {
+  width: 1128px;
+}
