@@ -21,7 +21,6 @@ export function createMarkup(arr, listElement) {
         <span class="span-value">${downloads}</span>
         </div>
         </a>
-        <img>
         </li>
         `)
         .join("");

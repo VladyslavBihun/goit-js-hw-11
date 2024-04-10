@@ -15,7 +15,13 @@ export function searchImage(userValue) {
             if (!response.ok) {
                 throw new Error(response.status)
             }
-            return response.json()
+            return response.json();
         })
-
+        .then(data => {
+            if (data.hits.length === 0) {
+                throw new Error();
+            }
+            return data;
+        })
 };
+
