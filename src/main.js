@@ -1,9 +1,6 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
-import SimpleLightbox from "simplelightbox";
-import "simplelightbox/dist/simple-lightbox.min.css";
-
 import { createMarkup } from './js/render-functions';
 import { searchImage } from './js/pixabay-api';
 
@@ -40,10 +37,3 @@ function handleSubmit(event) {
         });
 };
 
-let gallery = new SimpleLightbox('.list a', { 
-    sourceAttr: "href",
-    captionsData: "alt",
-    captionDelay: 250
- });
-
-gallery.refresh();

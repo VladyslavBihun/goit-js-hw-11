@@ -1,3 +1,6 @@
+import SimpleLightbox from "simplelightbox";
+import "simplelightbox/dist/simple-lightbox.min.css";
+
 export function createMarkup(arr, listElement) {
     const markup = arr
         .map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => `
@@ -25,4 +28,12 @@ export function createMarkup(arr, listElement) {
         `)
         .join("");
     listElement.innerHTML = markup;
+    gallery.refresh();
 }
+
+let gallery = new SimpleLightbox('.list a', { 
+    sourceAttr: "href",
+    captionsData: "alt",
+    captionDelay: 250
+ });
+
