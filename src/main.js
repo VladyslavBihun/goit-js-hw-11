@@ -20,6 +20,7 @@ function handleSubmit(event) {
     searchImage(inputValue)
         .then(data => createMarkup(data.hits, list))
         .catch(() => {
+            list.innerHTML = '';
             iziToast.error({
         message: `Sorry, there are no images matching your search query. Please try again!`,
         theme: 'dark',
